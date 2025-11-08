@@ -1022,7 +1022,7 @@
             });
 
             // Load Passed Interview List
-            db.collection('contestassedInterview').orderBy('createdAt', 'desc').limit(1).get().then(snapshot => {
+            db.collection('contestPassedInterview').orderBy('createdAt', 'desc').limit(1).get().then(snapshot => {
                 const contentDiv = document.getElementById('contestPassedInterviewContent');
                 contentDiv.innerHTML = '';
                 if (snapshot.empty) {
