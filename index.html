@@ -835,7 +835,7 @@
                 case 'committeePassedInterview': title = 'เพิ่มรายชื่อผู้ผ่านสัมภาษณ์ (คณะกรรมการ)'; break;
                 case 'contestAnnouncement': title = 'เพิ่มประกาศคุณสมบัติการสมัคร'; break;
                 case 'contestEligibleInterview': title = 'เพิ่มประกาศห้องที่ผ่านการคัดเลือก'; break;
-                case 'contestPassedInterview': title = 'เพิ่มประกาศรางวัล'; break;
+                case 'contestPassedInterview': title = 'เพิ่มประกาศห้องที่ได้รับรางวัล'; break;
 
             }
             document.getElementById('addModalTitle').textContent = title;
@@ -1022,7 +1022,7 @@
             });
 
             // Load Passed Interview List
-            db.collection('contestPassedInterview').orderBy('createdAt', 'desc').limit(1).get().then(snapshot => {
+            db.collection('contestassedInterview').orderBy('createdAt', 'desc').limit(1).get().then(snapshot => {
                 const contentDiv = document.getElementById('contestPassedInterviewContent');
                 contentDiv.innerHTML = '';
                 if (snapshot.empty) {
