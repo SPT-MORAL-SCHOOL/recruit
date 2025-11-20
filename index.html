@@ -903,10 +903,6 @@
                 else if (dataType.includes('contest')) {
                     loadContestData();
                 }
-            }).then(() => {
-                
-                loadAllpagesdata();
-                
             }).catch((error) => {
                 showToast('เกิดข้อผิดพลาด: ' + error.message, 'error');
             });
